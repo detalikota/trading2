@@ -1,7 +1,7 @@
 from django import forms
 
-class HomeForm(forms.ModelForm):
-    post = forms.CharField()
+""" class HomeForm(forms.ModelForm):
+    Post = forms.CharField()
 
     class Meta:
-        model = Post
+        model = Post """
