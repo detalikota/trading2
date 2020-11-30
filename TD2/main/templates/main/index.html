@@ -71,23 +71,24 @@ Head title Here
 <p>
      <form action="???" target="whyopen" method="get"> 
         Why open? (Hold Ctrl for multiple choice)
-        <select class="custom-select" id='whyopen'>
-            <option value ="" selected="selected">Bounce from strong level</option>
-            <option value ="">Coming to strong level</option>
-            <option value ="">Fibonachi</option>
-            <option value ="">Bounce from strong trend</option>
-            <option value ="">Coming to strong trend</option>
-            <option value ="">False penetration trend line</option>
-            <option value ="test3">False penetration level</option>
-            <option value ="test2">Triangle breakout</option>
-            <option value ="test">Triangle breakout</option>
+        <select class="custom-select" id='whyopen' multiple>
+            <option value ="bouncelevel">Bounce from strong level</option>
+            <option value ="cominglevel">Coming to strong level</option>
+            <option value ="fibo">Fibonachi</option>
+            <option value ="bouncetrend">Bounce from strong trend</option>
+            <option value ="comingtrend">Coming to strong trend</option>
+            <option value ="falsetrend">False penetration trend line</option>
+            <option value ="falselevel">False penetration level</option>
+            <option value ="trianglebreakdown">Triangle breakout</option>
+            <option value ="falsetrianglebreakdown">False triangle breakout</option>
+            <option value ="dif">Enter your custom option</option>
         </select> 
         <div id="add-id" style="display: none;">
             <textarea name=""></textarea>
             </div>
         <script>
-        $("#whyopen").on("change", function () {        
-            if($(this).val() === 'test')
+        $("#whyopen").on("click", function () {        
+            if($(this).val() === 'dif')
                 $('#add-id').show()
         });
         </script>
