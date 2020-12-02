@@ -22,14 +22,13 @@ posts = [
         'date_posted': 'December 1, 2020'
     }
 ]
-title = "wow"
+
 def home(request):
     
     return render(request, 'main/home.html')
 
 def about(request):
     context = {
-        'cat': posts,
-        'title': title
+        'cat': posts
     }
     return render(request, 'main/about.html', context)
