@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Post
+from django.http import HttpResponse
 
 # Create your views here.
 """ posts = [
@@ -32,3 +33,6 @@ def about(request):
         'posts': Post.objects.all()
     }
     return render(request, 'main/about.html', context)
+
+def test(request):
+    return HttpResponse("<h1> testing </h1>")
