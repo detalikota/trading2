@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+    <head> 
+        {% if title %}
+        <title> Django website - {{ title }} </title>
+        {% else %}
+        <title> Django website</title>
+        {% endif %}
+    </head>
+    
+    <body> 
+{% for post in posts %}
+        <h1>{{ post.p }}</h1> 
+        <p> Posted by {{ post.a }}</p>
+        <p> Date posted is {{ post.d }}</p>
+{% endfor %}
+    </body>
+</html>
