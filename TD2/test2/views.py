@@ -3,14 +3,16 @@ from django.http import HttpResponse
 
 posts = [
     {
-    'p': 'My first post',
-    'a': 'Magomed',
-    'd': 'July',
+    'author': 'Magomed',
+    'date_posted': 'December',
+    'title': 'Post #1',
+    'content': 'Content of post #1'
     },
     {
-    'p': 'My second post',
-    'a': 'John',
-    'd': 'April', 
+    'author': 'Ahmed',
+    'date_posted': 'November',
+    'title': 'Post #2',
+    'content': 'Content of post #2'
     },
 ]
 
@@ -19,13 +21,12 @@ def func():
         print (x)
     return x
 
-def test(request):
-    return render(request, "test2/home.html") # I can put the third argument here, called context to put some information into the templates
-
-def about(request):
-    
+def home(request):
     context = {
         'posts': posts,
         }
-    
-    return render(request, "test2/about.html", context)
+    return render(request, "test2/home.html", context) # I can put the third argument here, called context to put some information into the templates
+
+def about(request):
+       
+    return render(request, "test2/about.html")
