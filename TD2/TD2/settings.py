@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users2.apps.Users2Config',
     'test2.apps.Test2Config',
     'users.apps.UsersConfig',
     'main.apps.MainConfig',
@@ -130,5 +131,5 @@ MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL = 'td2-home'
+LOGIN_REDIRECT_URL = 'test_home'
 LOGIN_URL = 'login'
